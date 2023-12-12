@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist>
+  <dict>
+    <key>CFBundleExecutable</key>
+    <string>blocks</string>
+    <key>CFBundleIconFile</key>
+    <string></string>
+    <key>CFBundleIdentifier</key>
+    <string>com.soonth.blocks</string>
+    <key>CFBundleName</key>
+    <string>blocks</string>
+    <key>CFBundleDisplayName</key>
+    <string>blocks</string>
+    <key>CFBundlePackageType</key>
+    <string>BNDL</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleShortVersionString</key>
+    <string>0.0.5</string>
+    <key>CFBundleVersion</key>
+    <string>0.0.5</string>
+    <key>NSHumanReadableCopyright</key>
+    <string></string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>AudioComponents</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>soonth: blocks</string>
+        <key>description</key>
+        <string>blocks</string>
+        <key>factoryFunction</key>
+        <string>blocksAUFactory</string>
+        <key>manufacturer</key>
+        <string>Soon</string>
+        <key>type</key>
+        <string>aumu</string>
+        <key>subtype</key>
+        <string>Bloc</string>
+        <key>version</key>
+        <integer>5</integer>
+        <key>resourceUsage</key>
+        <dict>
+          <key>network.client</key>
+          <true/>
+          <key>temporary-exception.files.all.read-write</key>
+          <true/>
+        </dict>
+      </dict>
+    </array>
+  </dict>
+</plist>

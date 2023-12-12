@@ -55,7 +55,7 @@ juce_add_plugin(blocks
     NEEDS_MIDI_INPUT TRUE               # Does the plugin need midi input?
     NEEDS_MIDI_OUTPUT FALSE              # Does the plugin need midi output?
     IS_MIDI_EFFECT FALSE                 # Is this plugin a MIDI effect?
-    # EDITOR_WANTS_KEYBOARD_FOCUS TRUE/FALSE    # Does the editor need keyboard focus?
+    EDITOR_WANTS_KEYBOARD_FOCUS TRUE    # Does the editor need keyboard focus?
     # COPY_PLUGIN_AFTER_BUILD TRUE/FALSE        # Should the plugin be installed to a default location after building?
     PLUGIN_MANUFACTURER_CODE Soon               # A four-character manufacturer id with at least one upper-case character
     PLUGIN_CODE Bloc                            # A unique four-character plugin id with exactly one upper-case character
@@ -77,10 +77,7 @@ juce_add_plugin(blocks
 # CMake command.
 file(GLOB_RECURSE SourceFiles CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.h")
 
-target_sources(blocks
-    PRIVATE
-    ${SourceFiles}
-)
+target_sources(blocks PRIVATE ${SourceFiles})
 target_include_directories(blocks PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/Source")
 
 # `target_compile_definitions` adds some preprocessor definitions to our target. In a Projucer
@@ -127,3 +124,20 @@ target_link_libraries(blocks
     PUBLIC
         juce::juce_recommended_config_flags
         juce::juce_recommended_lto_flags)
+
+Include(FetchContent)
+
+FetchContent_Declare(
+  Catch2
+  GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+  GIT_TAG        v3.4.0 # or a later release
+)
+
+FetchContent_MakeAvailable(Catch2)
+
+add_executable(tests test.cpp)
+target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
+# add_library(tests_sources OBJECT ${SourceFiles})
+target_link_libraries(tests PRIVATE blocks)
+enable_testing()
+add_test(NAME tests COMMAND tests)

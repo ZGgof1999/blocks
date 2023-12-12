@@ -1,0 +1,22 @@
+Start testing: Dec 12 21:13 IST
+----------------------------------------------------------
+1/1 Testing: tests
+1/1 Test: tests
+Command: "/Users/dangerman/soonth/blocks/tests"
+Directory: /Users/dangerman/soonth/blocks
+"tests" start time: Dec 12 21:13 IST
+Output:
+----------------------------------------------------------
+Randomness seeded to: 128057822
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"tests" end time: Dec 12 21:13 IST
+"tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 12 21:13 IST

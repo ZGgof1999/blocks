@@ -1,0 +1,54 @@
+/* =========================================================================================
+
+   This is an auto-generated file: Any edits you make may be overwritten!
+
+*/
+
+#pragma once
+
+namespace BinaryData
+{
+    extern const char*   RobotoMedium_ttf;
+    const int            RobotoMedium_ttfSize = 168644;
+
+    extern const char*   left_arrow_svg;
+    const int            left_arrow_svgSize = 467;
+
+    extern const char*   matrix_svg;
+    const int            matrix_svgSize = 583;
+
+    extern const char*   mixpanel_project_token_key;
+    const int            mixpanel_project_token_keySize = 0;
+
+    extern const char*   modulators_svg;
+    const int            modulators_svgSize = 239;
+
+    extern const char*   plus_svg;
+    const int            plus_svgSize = 410;
+
+    extern const char*   save_svg;
+    const int            save_svgSize = 498;
+
+    extern const char*   settings_svg;
+    const int            settings_svgSize = 1902;
+
+    extern const char*   theme_svg;
+    const int            theme_svgSize = 371;
+
+    // Number of elements in the namedResourceList and originalFileNames arrays.
+    const int namedResourceListSize = 9;
+
+    // Points to the start of a list of resource names.
+    extern const char* namedResourceList[];
+
+    // Points to the start of a list of resource filenames.
+    extern const char* originalFilenames[];
+
+    // If you provide the name of one of the binary resource variables above, this function will
+    // return the corresponding data and its size (or a null pointer if the name isn't found).
+    const char* getNamedResource (const char* resourceNameUTF8, int& dataSizeInBytes);
+
+    // If you provide the name of one of the binary resource variables above, this function will
+    // return the corresponding original, non-mangled filename (or a null pointer if the name isn't found).
+    const char* getNamedResourceOriginalFilename (const char* resourceNameUTF8);
+}
